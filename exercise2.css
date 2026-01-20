@@ -1,0 +1,181 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+.welcome {
+  margin: 15px 0px;
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-left: 40%;
+  color: #0056b3;
+  animation: slideIn 3s ease-in-out 1s infinite;
+}
+@keyframes slideIn {
+  0% {
+    transform: translateY(-20px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+header {
+  background: #00a13e;
+  color: #fff;
+  padding: 10px 0;
+  text-align: center;
+  width: 100%;
+  height: 35px;
+  margin-bottom: 13px;
+}
+nav {
+  background: #00a13e;
+  color: #fff;
+  padding: 10px;
+  text-align: center;
+}
+nav li {
+  display: inline;
+  list-style: none;
+}
+nav a {
+  color: #fff;
+  font-weight: 500;
+  margin: 0 35px;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+aside {
+  background: #e2e2e2;
+  padding: 10px;
+  margin: 10px 0;
+  width: 15%;
+  height: 100vh;
+  float: left;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+}
+aside h3 {
+  color: #0056b3;
+  font-weight: 600;
+  margin: 10px 0;
+  justify-content: center;
+}
+
+aside ul {
+  list-style: none;
+  background-color: springgreen;
+  padding: 0;
+}
+
+aside ul li {
+  margin: 10px 0;
+  padding-left: 5px;
+  border: 1px solid springgreen;
+}
+aside ul li a {
+  color: #333;
+  text-decoration: none;
+}
+
+main {
+  margin-left: 18%;
+  padding: 10px;
+}
+
+main h1 {
+  margin: 35px 0;
+  font-size: 2.2rem;
+}
+
+main p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+main img {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 8px;
+}
+main button {
+  background-color: #260080;
+  color: #fff;
+  border: none;
+  padding: 6px 12px;
+  cursor: pointer;
+  font-size: 0.8rem;
+  display: block;
+  margin-bottom: 30px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  border: 2px solid #000;
+}
+th,
+td {
+  border: 2px solid #000;
+  padding: 12px;
+  text-align: left;
+}
+th {
+  background-color: #e0e0e0;
+  font-weight: bold;
+}
+input[type="number"] {
+  width: 100%;
+  padding: 8px;
+  border: 2px solid #999;
+  border-radius: 4px;
+  font-size: 16px;
+  box-sizing: border-box;
+}
+input[type="number"]:focus {
+  outline: none;
+  border-color: #4caf50;
+}
+.total-row {
+  background-color: #f5f5f5;
+  font-weight: bold;
+}
+#totalPrice {
+  background-color: #fff3cd;
+  border: 2px solid #999;
+  padding: 8px;
+  border-radius: 4px;
+  font-size: 18px;
+  font-weight: bold;
+}
+button {
+  width: 30%;
+  margin-top: 18px;
+  padding: 12px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 18px;
+  cursor: pointer;
+  font-weight: bold;
+  display: block;
+  margin: 0 auto;
+}
+button:hover {
+  background-color: #45a049;
+}
+.no-column {
+  width: 60px;
+  text-align: center;
+}

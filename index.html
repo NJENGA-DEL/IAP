@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="exercise2.css" />
+    <title>Simple Web Page</title>
+  </head>
+  <body>
+    <h1 class="welcome">Welcome to elearning...</h1>
+    <header>
+      <nav>
+        <ul>
+          <li><a href="">Home</a></li>
+          <li><a href="">About Us</a></li>
+          <li><a href="">Services</a></li>
+          <li><a href="">Contact Us</a></li>
+          <li><a href="">Help</a></li>
+          <li><a href="">User</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!--Side bar of the page -->
+    <div class="layout">
+      <aside>
+        <h3>Dashboard</h3>
+        <ul>
+          <li><a href="">Student</a></li>
+          <li><a href="">Lecturer</a></li>
+          <li><a href="">Library</a></li>
+          <li><a href="">Admin</a></li>
+        </ul>
+      </aside>
+
+      <main>
+        <h1>
+          Build your future with us<br />
+          Where the future is written by your own hands<br />
+        </h1>
+
+        <p>
+          <special>AI and ML</special> is now the top ranked course in the field
+          of computer science
+        </p>
+        <img src="aiml.jpeg" alt="aiml image" width="300" height="200" />
+        <button>Read More</button>
+        <div style="background-color: green; color: white; padding: 5px">
+          <h1>OUR SCHOOL:</h1>
+          <p>
+            Our school has two departments namely: Computer Science and
+            Information Technology.
+          </p>
+          <hr />
+          <h1>OUR STUDENTS:</h1>
+          <p>
+            Our School is able to attract the best students due to its programs'
+            competitiveness in the industry.
+          </p>
+        </div>
+      </main>
+    </div>
+
+    <div class="container">
+      <h1>Running Total of all TextBoxes</h1>
+
+      <table>
+        <thead>
+          <tr>
+            <th class="no-column">No.</th>
+            <th>Item</th>
+            <th>Price</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="no-column">1</td>
+            <td>Milk:</td>
+            <td>
+              <input
+                type="number"
+                id="milk"
+                step="0.01"
+                placeholder="0"
+                value="2"
+              />
+            </td>
+          </tr>
+          <tr>
+            <td class="no-column">2</td>
+            <td>Bread:</td>
+            <td>
+              <input type="number" id="bread" step="0.01" placeholder="0" />
+            </td>
+          </tr>
+          <tr>
+            <td class="no-column">3</td>
+            <td>Noodles:</td>
+            <td>
+              <input type="number" id="noodles" step="0.01" placeholder="0" />
+            </td>
+          </tr>
+          <tr>
+            <td class="no-column">4</td>
+            <td>Cheese:</td>
+            <td>
+              <input type="number" id="cheese" step="0.01" placeholder="0" />
+            </td>
+          </tr>
+          <tr class="total-row">
+            <td></td>
+            <td>Total Price</td>
+            <td><div id="totalPrice">0.00</div></td>
+          </tr>
+        </tbody>
+      </table>
+
+      <button onclick="calculateTotal()">Calculate Total</button>
+    </div>
+
+    <script>
+      function calculateTotal() {
+        // Get values from input fields
+        var milk = parseFloat(document.getElementById("milk").value) || 0;
+        var bread = parseFloat(document.getElementById("bread").value) || 0;
+        var noodles = parseFloat(document.getElementById("noodles").value) || 0;
+        var cheese = parseFloat(document.getElementById("cheese").value) || 0;
+
+        // Calculate total
+        var total = milk + bread + noodles + cheese;
+
+        // Display total with 2 decimal places
+        document.getElementById("totalPrice").textContent = total.toFixed(2);
+      }
+    </script>
+  </body>
+</html>
