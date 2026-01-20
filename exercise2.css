@@ -1,3 +1,4 @@
+/* ===== Global Reset ===== */
 * {
   margin: 0;
   padding: 0;
@@ -11,8 +12,9 @@ body {
   color: #333;
 }
 
+/* ===== Welcome Animation ===== */
 .welcome {
-  margin: 15px 0px;
+  margin: 15px 0;
   font-size: 1.5rem;
   font-weight: 600;
   margin-left: 40%;
@@ -30,6 +32,7 @@ body {
   }
 }
 
+/* ===== Header & Navigation ===== */
 header {
   background: #00a13e;
   color: #fff;
@@ -39,24 +42,34 @@ header {
   height: 35px;
   margin-bottom: 13px;
 }
+
 nav {
   background: #00a13e;
   color: #fff;
   padding: 10px;
   text-align: center;
 }
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
 nav li {
   display: inline;
-  list-style: none;
 }
+
 nav a {
   color: #fff;
   font-weight: 500;
-  margin: 0 35px;
   text-decoration: none;
   cursor: pointer;
 }
 
+/* ===== Sidebar ===== */
 aside {
   background: #e2e2e2;
   padding: 10px;
@@ -66,11 +79,12 @@ aside {
   float: left;
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
 }
+
 aside h3 {
   color: #0056b3;
   font-weight: 600;
   margin: 10px 0;
-  justify-content: center;
+  text-align: center;
 }
 
 aside ul {
@@ -84,11 +98,13 @@ aside ul li {
   padding-left: 5px;
   border: 1px solid springgreen;
 }
+
 aside ul li a {
   color: #333;
   text-decoration: none;
 }
 
+/* ===== Main Content ===== */
 main {
   margin-left: 18%;
   padding: 10px;
@@ -103,11 +119,13 @@ main p {
   font-size: 1.2rem;
   margin-bottom: 20px;
 }
+
 main img {
   max-width: 100%;
   height: auto;
   margin-bottom: 8px;
 }
+
 main button {
   background-color: #260080;
   color: #fff;
@@ -119,21 +137,25 @@ main button {
   margin-bottom: 30px;
 }
 
+/* ===== Table Styling ===== */
 table {
   width: 100%;
   border-collapse: collapse;
   border: 2px solid #000;
 }
+
 th,
 td {
   border: 2px solid #000;
   padding: 12px;
   text-align: left;
 }
+
 th {
   background-color: #e0e0e0;
   font-weight: bold;
 }
+
 input[type="number"] {
   width: 100%;
   padding: 8px;
@@ -142,14 +164,17 @@ input[type="number"] {
   font-size: 16px;
   box-sizing: border-box;
 }
+
 input[type="number"]:focus {
   outline: none;
   border-color: #4caf50;
 }
+
 .total-row {
   background-color: #f5f5f5;
   font-weight: bold;
 }
+
 #totalPrice {
   background-color: #fff3cd;
   border: 2px solid #999;
@@ -158,6 +183,7 @@ input[type="number"]:focus {
   font-size: 18px;
   font-weight: bold;
 }
+
 button {
   width: 30%;
   margin-top: 18px;
@@ -172,10 +198,90 @@ button {
   display: block;
   margin: 0 auto;
 }
+
 button:hover {
   background-color: #45a049;
 }
+
 .no-column {
   width: 60px;
   text-align: center;
+}
+
+/* ===== Layout for Desktop ===== */
+.layout {
+  display: flex;
+  gap: 20px;
+}
+
+/* ===== Media Queries ===== */
+
+/* Mobile: ≤600px */
+@media (max-width: 600px) {
+  aside {
+    width: 100%;
+    height: auto;
+    float: none;
+    margin-bottom: 15px;
+  }
+
+  main {
+    margin-left: 0;
+    width: 100%;
+  }
+
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  nav li {
+    display: block;
+    margin: 5px 0;
+  }
+
+  .welcome {
+    margin-left: 0;
+    text-align: center;
+    font-size: 1.2rem;
+  }
+
+  table,
+  th,
+  td {
+    font-size: 14px;
+  }
+
+  button {
+    width: 90%;
+    font-size: 16px;
+  }
+}
+
+/* Tablet: 601px – 900px */
+@media (min-width: 601px) and (max-width: 900px) {
+  aside {
+    width: 30%;
+    height: auto;
+  }
+
+  main {
+    margin-left: 0;
+    width: 65%;
+  }
+
+  nav ul {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .welcome {
+    margin-left: 0;
+    text-align: center;
+  }
+
+  button {
+    width: 50%;
+  }
 }
